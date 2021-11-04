@@ -9,7 +9,7 @@ const Address = () => {
       <Divider horizontal>Endereço buscado</Divider>
 
       {ceps.cep && (
-        <div className="Address">
+        <div className="Address" data-testid="cep-container">
           <Form>
             <Form.Field inline>
               <Header size="small">Logradouro</Header>

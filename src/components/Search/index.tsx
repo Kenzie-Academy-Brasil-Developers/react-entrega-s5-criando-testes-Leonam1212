@@ -14,9 +14,10 @@ const Search = () => {
         <Input
           type="number"
           placeholder="Insira o CEP"
-          onChange={(event) => setCepNumber(event.target.value)}
+          onChange={(e) => setCepNumber(e.target.value)}
         />
         <Button
+          name = "buttonSubmit"
           primary
           disabled={!cepNumber}
           onClick={() => handleSearch(cepNumber)}
