@@ -23,10 +23,9 @@ describe("Search component flow", () => {
     const inputField = screen.getByPlaceholderText("Insira o CEP");
     const buttonElement = screen.getByRole("button");
 
-    setTimeout(() => {
-        fireEvent.change(inputField, { target: { value: 29118510 } });
-        fireEvent.click(buttonElement);
-    }, 500)
+    fireEvent.change(inputField, { target: { value: 29118510 } });
+    fireEvent.click(buttonElement);
+
 
     await waitFor(() => {
       expect(inputField).toHaveValue(29118510);
